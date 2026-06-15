@@ -1,6 +1,7 @@
 package com.dowit.backend.controller;
 
 import com.dowit.backend.entity.Task;
+import com.dowit.backend.entity.enums.TaskStatus;
 import com.dowit.backend.service.TaskService;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
@@ -51,7 +52,7 @@ public class TaskController {
 
     @GetMapping("/status")
     public List<Task> getTasksByStatus(
-            @RequestParam String status){
+            @RequestParam TaskStatus status){
         return taskService.getTaskByStatus(status);
     }
 
