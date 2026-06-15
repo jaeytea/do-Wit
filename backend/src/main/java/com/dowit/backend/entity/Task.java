@@ -30,11 +30,11 @@ public class Task {
 
     private String description;
 
-    @NotBlank(message = "Please add priority")
+    @NotNull(message = "Please add priority")
     @Enumerated(EnumType.STRING)
     private TaskPriority priority;
 
-    @NotBlank(message = "Please add status")
+    @NotNull(message = "Please add status")
     @Enumerated(EnumType.STRING)
     private TaskStatus status;
 
